@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Sheets Mimic</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="spreadsheet">
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <button onclick="boldText()">B</button>
+      <button onclick="italicText()">I</button>
+      <button onclick="increaseFontSize()">A+</button>
+      <button onclick="decreaseFontSize()">A-</button>
+      <button onclick="trimData()">Trim</button>
+      <button onclick="upperData()">Uppercase</button>
+      <button onclick="lowerData()">Lowercase</button>
+      <button onclick="removeDuplicates()">Remove Duplicates</button>
+      <button onclick="findAndReplace()">Find & Replace</button>
+    </div>
+
+    <!-- Formula Bar -->
+    <input type="text" id="formula-bar" placeholder="Enter formula" oninput="updateFormula()">
+    <input type="color" id="color-picker" onchange="changeColor()">
+
+    <!-- Spreadsheet Grid -->
+    <table id="spreadsheet-grid">
+      <!-- Dynamic content will be inserted here -->
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
